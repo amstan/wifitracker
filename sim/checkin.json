@@ -1,0 +1,43 @@
+{
+	"mac_address": "aa-bb-cc-dd-ee-ff",
+	"software_version": "ed0877e4d874ad81947ddd8305c8c74c1c73afc2",
+	"location": {
+		"0": {
+			"wifi_towers": [
+				{
+					"mac_address": "01-23-45-67-89-ab",
+					"signal_strength": 8
+				},
+				{
+					"mac_address": "01-23-45-67-89-ac",
+					"signal_strength": 4
+				}
+			]
+		},
+		"10": {
+			"wifi_towers": [
+				{
+					"mac_address": "01-23-45-67-89-ab",
+					"signal_strength": 8
+				},
+				{
+					"mac_address": "01-23-45-67-89-ac",
+					"signal_strength": 4
+				}
+			]
+		},
+		"20": {
+			"wifi_towers": [
+				{
+					"mac_address": "01-23-45-67-89-ab",
+					"signal_strength": 8
+				},
+				{
+					"mac_address": "01-23-45-67-89-ac",
+					"signal_strength": 4
+				}
+			]
+		}
+	},
+	"battery_voltage": 3.4
+}
