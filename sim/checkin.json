@@ -4,14 +4,16 @@
 	"location": {
 		"0": {
 			"wifi_towers": [
-				{
-					"mac_address": "01-23-45-67-89-ab",
-					"signal_strength": 8
-				},
-				{
-					"mac_address": "01-23-45-67-89-ac",
-					"signal_strength": 4
-				}
+			{
+				"mac_address": "00-13-46-AB-E2-BE",
+				"signal_strength": 8,
+				"age": 0
+			},
+			{
+				"mac_address": "00-13-F7-02-5A-07",
+				"signal_strength": 4,
+				"age": 0
+			}
 			]
 		},
 		"10": {
@@ -39,5 +41,5 @@
 			]
 		}
 	},
-	"battery_voltage": 3.4
+	"battery": "100%"
 }
