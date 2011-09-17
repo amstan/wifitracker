@@ -1,0 +1,5 @@
+{"version": "1.1.0","request_address": true,"address_language": "en_GB","wifi_towers": [
+{"mac_address": "00-1C-F0-45-8D-30","signal_strength": 8,"age": 0},
+{"mac_address": "AE-AA-75-55-AF-AB","signal_strength": 6,"age": 0},
+{"mac_address": "00-1C-DF-0E-49-DC","signal_strength": 4,"age": 0}
+]}
