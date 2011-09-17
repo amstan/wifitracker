@@ -4,16 +4,16 @@
 	"location": {
 		"0": {
 			"wifi_towers": [
-			{
-				"mac_address": "00-13-46-AB-E2-BE",
-				"signal_strength": 8,
-				"age": 0
-			},
-			{
-				"mac_address": "00-13-F7-02-5A-07",
-				"signal_strength": 4,
-				"age": 0
-			}
+				{
+					"mac_address": "00-13-46-AB-E2-BE",
+					"signal_strength": 8,
+					"age": 0
+				},
+				{
+					"mac_address": "00-13-F7-02-5A-07",
+					"signal_strength": 4,
+					"age": 0
+				}
 			]
 		},
 		"10": {
