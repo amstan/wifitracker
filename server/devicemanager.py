@@ -3,6 +3,7 @@
 import json
 from urllib2 import urlopen
 from datetime import datetime, timedelta
+import logging
 
 def printDict(dictionary,indent=0):
 	for key in dictionary.keys():
@@ -45,6 +46,8 @@ class DeviceManager:
 		for key in checkInData["location"].keys():
 			checkInData["location"][key]["ipaddress"]=ipaddress
 			self.locations[mac_address][key]=checkInData["location"][key]
+		
+		logging.info("CheckIn from %s" % mac_address)
 	
 	def solveLocation(self,device,time):
 		request=self.locations[device][time]
@@ -53,6 +56,7 @@ class DeviceManager:
 		request["address_language"]="en_GB"
 		response=json.loads(urlopen("https://www.google.com/loc/json",json.dumps(request)).read())
 		self.locations[device][time]["location"]=response["location"]
+		logging.info("Solving location for %s from time %s" % (device,time))
 	
 	def deviceStatus(self,mac):
 		try:
@@ -60,14 +64,14 @@ class DeviceManager:
 			print "Device Mac Address: %s" % (mac)
 			print "Device Type: %s" % (device["type"])
 		except KeyError:
-			raise Error("No such device tracked")
+			raise Exception("No such device tracked")
 		
 		try:
 			locations=self.locations[mac]
 			print "Number of CheckIn locations: %s" % (len(locations))
 			lastCheckIn=sorted(locations.keys())[-1]
 		except KeyError:
-			raise Error("No data exists on device %s" % (mac))
+			raise Exception("No data exists on device %s" % (mac))
 		
 		ways=[way for way in locations[lastCheckIn].keys() if way!="location"]
 		
@@ -77,8 +81,12 @@ class DeviceManager:
 		print "Last known battery level: %s" % (self.devices[mac]["battery"])
 		print "Last known location @%s via %s:" % (lastCheckIn,', '.join(ways))
 		printDict(locations[lastCheckIn]["location"],2)
+		
+		return locations[lastCheckIn]["location"]
 
 if __name__ == '__main__':
+	logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
+	
 	import sys
 	server=DeviceManager()
 	server.parseCheckin(open(sys.argv[1]).read())
