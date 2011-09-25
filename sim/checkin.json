@@ -3,40 +3,19 @@
 	"software_version": "ed0877e4d874ad81947ddd8305c8c74c1c73afc2",
 	"location": {
 		"0": {
-			"wifi_towers": [
-				{
-					"mac_address": "00-13-46-AB-E2-BE",
-					"signal_strength": 8,
-					"age": 0
+			"wifi_towers": [      {
+						"mac_address": "00:13:f7:02:5a:07",
+						"signal_strength": 56,
+						"age": 228,
+						"channel": 6,
+						"ssid": "NY"
 				},
 				{
-					"mac_address": "00-13-F7-02-5A-07",
-					"signal_strength": 4,
-					"age": 0
-				}
-			]
-		},
-		"10": {
-			"wifi_towers": [
-				{
-					"mac_address": "01-23-45-67-89-ab",
-					"signal_strength": 8
-				},
-				{
-					"mac_address": "01-23-45-67-89-ac",
-					"signal_strength": 4
-				}
-			]
-		},
-		"20": {
-			"wifi_towers": [
-				{
-					"mac_address": "01-23-45-67-89-ab",
-					"signal_strength": 8
-				},
-				{
-					"mac_address": "01-23-45-67-89-ac",
-					"signal_strength": 4
+						"mac_address": "00:25:9c:d4:0b:a2",
+						"signal_strength": 32,
+						"age": 402,
+						"channel": 11,
+						"ssid": "HyperTriangle"
 				}
 			]
 		}
